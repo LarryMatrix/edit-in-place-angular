@@ -8,8 +8,12 @@
       </thead>
 
       <tr *ngFor="let user of TableData">
-        <td *ngIf="user.id === EditRowId"><input type="text" [(ngModel)]="user.name" /></td>
-        <td *ngIf="user.id != EditRowId" (click)="Edit(user.id)">{{user.name}}</td>
+        <td *ngIf="user.id === EditRowId">
+          <input type="text" [(ngModel)]="user.name" />
+        </td>
+        <td *ngIf="user.id != EditRowId" (click)="Edit(user.id)">
+          {{user.name}}
+        </td>
         <td>{{user.mobile}}</td>
         <td>{{user.email}}</td>
       </tr>
